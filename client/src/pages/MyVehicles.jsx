@@ -18,7 +18,7 @@ const MyVehicles = () => {
     }, [user]);
 
     const fetchVehicles = () => {
-        axios.get(`http://localhost:5000/my-vehicles/${user.email}`, { withCredentials: true })
+        axios.get(`https://assignment10-0.vercel.app/my-vehicles/${user.email}`, { withCredentials: true })
             .then(res => {
                 setVehicles(res.data);
                 setLoading(false);
@@ -40,7 +40,7 @@ const MyVehicles = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`http://localhost:5000/vehicle/${id}`, { withCredentials: true })
+                axios.delete(`https://assignment10-0.vercel.app/vehicle/${id}`, { withCredentials: true })
                     .then(res => {
                         if (res.data.deletedCount > 0) {
                             Swal.fire(

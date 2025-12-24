@@ -11,7 +11,7 @@ const MyBookings = () => {
 
     useEffect(() => {
         if (user?.email) {
-            axios.get(`http://localhost:5000/my-bookings/${user.email}`, { withCredentials: true })
+            axios.get(`https://assignment10-0.vercel.app/my-bookings/${user.email}`, { withCredentials: true })
                 .then(res => {
                     setBookings(res.data);
                     setLoading(false);

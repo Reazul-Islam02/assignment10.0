@@ -18,7 +18,6 @@ app.use(cors({
         'http://localhost:5173',
         'http://localhost:5174',
         'http://localhost:5175',
-        'https://travelease-client.web.app',
         'https://travelease-client.firebaseapp.com'
     ],
     credentials: true

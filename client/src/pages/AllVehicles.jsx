@@ -12,7 +12,7 @@ const AllVehicles = () => {
     // Debounce search could be added for better performance, simpler version here
     useEffect(() => {
         setLoading(true);
-        let url = `http://localhost:5000/vehicles?search=${search}`;
+        let url = `https://assignment10-0.vercel.app/vehicles?search=${search}`;
         if (sort) {
             url += `&sort=${sort}`;
         }

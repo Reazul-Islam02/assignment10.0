@@ -25,7 +25,7 @@ const AddVehicle = () => {
         };
 
         try {
-            const res = await axios.post('http://localhost:5000/vehicles', vehicleData, { withCredentials: true });
+            const res = await axios.post('https://assignment10-0.vercel.app/vehicles', vehicleData, { withCredentials: true });
             if (res.data.insertedId || res.data._id) {
                 toast.success('Vehicle Added Successfully');
                 navigate('/my-vehicles');

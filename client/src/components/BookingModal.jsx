@@ -39,7 +39,7 @@ const BookingModal = ({ vehicle, closeModal }) => {
         };
 
         try {
-            const res = await axios.post('http://localhost:5000/bookings', bookingData, { withCredentials: true });
+            const res = await axios.post('https://assignment10-0.vercel.app/bookings', bookingData, { withCredentials: true });
             if (res.data.insertedId || res.data._id) {
                 toast.success('Booking Successful!');
                 closeModal();

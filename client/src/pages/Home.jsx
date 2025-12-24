@@ -10,7 +10,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/vehicles/latest')
+        axios.get('https://assignment10-0.vercel.app/vehicles/latest')
             .then(res => {
                 setLatestVehicles(res.data);
                 setLoading(false);

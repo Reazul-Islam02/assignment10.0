@@ -14,7 +14,7 @@ const VehicleDetails = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/vehicle/${id}`)
+        axios.get(`https://assignment10-0.vercel.app/vehicle/${id}`)
             .then(res => {
                 setVehicle(res.data);
                 setLoading(false);

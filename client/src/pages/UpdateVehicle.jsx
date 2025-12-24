@@ -13,7 +13,7 @@ const UpdateVehicle = () => {
     const [vehicle, setVehicle] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/vehicle/${id}`)
+        axios.get(`https://assignment10-0.vercel.app/vehicle/${id}`)
             .then(res => {
                 setVehicle(res.data);
                 setLoading(false);
@@ -36,7 +36,7 @@ const UpdateVehicle = () => {
         };
 
         try {
-            const res = await axios.put(`http://localhost:5000/vehicle/${id}`, vehicleData, { withCredentials: true });
+            const res = await axios.put(`https://assignment10-0.vercel.app/vehicle/${id}`, vehicleData, { withCredentials: true });
             if (res.data.modifiedCount > 0) {
                 toast.success('Vehicle Updated Successfully');
                 navigate('/my-vehicles');

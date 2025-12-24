@@ -39,7 +39,7 @@ const AuthProvider = ({ children }) => {
     const logOut = async () => {
         setLoading(true);
         try {
-            await axios.post('http://localhost:5000/logout', {}, { withCredentials: true });
+            await axios.post('https://assignment10-0.vercel.app/logout', {}, { withCredentials: true });
         } catch (error) {
             console.error('Logout API error', error);
         }
@@ -60,12 +60,12 @@ const AuthProvider = ({ children }) => {
             // If user exists, issue a JWT token
             if (currentUser) {
                 const loggedUser = { email: currentUser.email };
-                axios.post('http://localhost:5000/jwt', loggedUser, { withCredentials: true })
+                axios.post('https://assignment10-0.vercel.app/jwt', loggedUser, { withCredentials: true })
                     .then(res => {
                         console.log('Token response', res.data);
                     })
             } else {
-                axios.post('http://localhost:5000/logout', {}, { withCredentials: true })
+                axios.post('https://assignment10-0.vercel.app/logout', {}, { withCredentials: true })
                     .then(res => console.log('Token cleared'));
             }
 
